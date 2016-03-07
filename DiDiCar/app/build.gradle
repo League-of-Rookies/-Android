@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.product.lor.didicar"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        manifestPlaceholders = [
+                GETUI_APP_ID : "Er2EBGbuCY66hCt3MpaOk1",
+                GETUI_APP_KEY : "C0xrEIRLS26UZCpzdpWgW5",
+                GETUI_APP_SECRET : "AW86ZWoOJMAOaAWc14OWd8",
+                PACKAGE_NAME : applicationId
+        ]
+
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile files('libs/AMap_2DMap_V2.8.1_20160202.jar')
+    compile files('libs/AMap_Location_v2.3.0_20160112.jar')
+
+    compile 'com.getui:sdk:+'
+    compile 'com.getui:ext:+'
+    compile 'com.android.support:support-v4:+'
+
+}
