@@ -40,4 +40,8 @@ dependencies {
     compile 'com.getui:ext:+'
     compile 'com.android.support:support-v4:+'
 
+    // 开源库：弹性的抽屉布局:https://github.com/mxn21/FlowingDrawer
+    compile 'com.mxn.soul:flowingdrawer-core:1.2.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+
 }

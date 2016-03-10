@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!--Toolbar的颜色-->
+    <color name="colorPrimary">@color/md_grey_50</color>
+    <!--状态栏的颜色-->
+    <color name="colorPrimaryDark">@color/md_blue_grey_600</color>
+    <!--强调色: EditText编辑时、RadioButton选中、CheckBox等选中时的颜色。 -->
+    <color name="colorAccent">@color/md_grey_900</color>
+    <color name="textColorPrimary">@color/md_grey_600</color>
+    <color name="windowBackground">@color/md_grey_300</color>
+    <color name="navigationBarColor">@color/md_blue_grey_50</color>
 </resources>
