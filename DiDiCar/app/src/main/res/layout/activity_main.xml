@@ -1,31 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--使用弹性的抽屉布局-->
-<!--根目录需要为: LeftDrawerLayout-->
-<!--LeftDrawerLayout 包含两个子布局，第一个为内容，第二个为抽屉菜单-->
-<android.support.design.widget.CoordinatorLayout
+<!--【1】根目录需要为: LeftDrawerLayout-->
+<!--【2】LeftDrawerLayout 包含两个子布局，第一个为内容，第二个为抽屉菜单-->
+<!--【3】抽屉菜单也是两个子布局,第一个为浮动的弹性布局:FlowingView,
+第二个为抽屉菜单的内容布局:Fragment,这个Fragment需要做以下操作
+(1)继承:MenuFragment,并重写方法:onCreateView(),方法return setupReveal(rootView)
+(2)设置布局的背景为透明-->
+<!--抽屉菜单的内容布局需要有属性:marginRight,这个影响弹性,弹性随着数值递增-->
+<!--【4】调用 LeftDrawerLayout 的 setFluidView(FlowingView mFlowingView) 方法
+来设置 FlowingView 的实例-->
+<!--【5】调用 LefDrawerLayout 的 setMenuFragment(MenuFragment mMenuFragment) 方法
+来设置 MenuFragment 的实例-->
+<!--【6】LeftDrawerLayout 的 closeDrawer() 和 openDrawer() 方法来关闭或打开菜单-->
+
+<com.mxn.soul.flowingdrawer_core.LeftDrawerLayout
+    android:id="@+id/activity_main_drawerLayout"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.product.lor.didicar.MainActivity">
+    android:clipChildren="false">
 
-    <android.support.design.widget.AppBarLayout
+
+    <!--内容布局-->
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.product.lor.didicar.MainActivity">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+            android:layout_height="wrap_content"
+            >
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/layout_toolbar" />
 
-    </android.support.design.widget.AppBarLayout>
+        </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main"/>
+        <include layout="@layout/content_main"/>
 
-</android.support.design.widget.CoordinatorLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!--抽屉菜单-->
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:clipChildren="false"
+        >
+
+        <com.mxn.soul.flowingdrawer_core.FlowingView
+            android:id="@+id/activity_main_flowingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:id="@+id/activity_main_container_left_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="0dp"
+            android:paddingRight="0dp"
+            />
+
+    </RelativeLayout>
+
+</com.mxn.soul.flowingdrawer_core.LeftDrawerLayout>

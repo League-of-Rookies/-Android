@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/main_menu_left_drawer_group_1">
+        <item
+            android:id="@+id/main_menu_left_drawer_my_journey"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/main_left_menu_my_journey"/>
+        <item
+            android:id="@+id/main_menu_left_drawer_my_wallet"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/main_left_menu_my_wallet"/>
+        <item
+            android:id="@+id/main_menu_left_drawer_message_center"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/main_left_menu_message_center"/>
+    </group>
+    <group android:id="@+id/main_menu_left_drawer_group_2">
+        <item
+            android:id="@+id/main_menu_left_drawer_didi_store"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/main_left_menu_didi_store"/>
+        <item
+            android:id="@+id/main_menu_left_drawer_reference_award"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/main_left_menu_reference_award"/>
+        <item
+            android:id="@+id/main_menu_left_drawer_driver_recruitment"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/main_left_menu_driver_recruitment"/>
+        <item
+            android:id="@+id/main_menu_left_drawer_discover"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/main_left_menu_discover"/>
+    </group>
+    <group android:id="@+id/main_menu_left_drawer_group_3">
+        <item
+            android:id="@+id/main_menu_left_drawer_setting"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/setting"/>
+    </group>
+</menu>

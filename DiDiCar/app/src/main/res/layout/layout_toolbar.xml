@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    tools:showIn="@layout/activity_main"
+    app:titleTextColor="@color/textColorPrimary"
+    app:elevation="@dimen/default_elevation"
+    app:popupTheme="@style/AppTheme.PopupOverlay"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <ImageView
+        android:padding="16dp"
+        android:src="@mipmap/ic_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</android.support.v7.widget.Toolbar>
+    <!--app:theme：指定Toolbar的样式，包括ActionbarToggle和popupMenu的指示图标颜色-->
+    <!--app:popupTheme：指定popupMenu溢出后的样式-->
+    <!--app:title:    指定Toolbar中主Title的内容-->

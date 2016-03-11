@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">DiDiCar</string>
     <string name="action_settings">Settings</string>
+
+    <!--全局文本-->
+    <string name="setting">设置</string>
+    <string name="empty"></string>
+
+    <!--MainActivity-->
+    <string name="main_left_menu_my_journey">我的行程</string>
+    <string name="main_left_menu_my_wallet">我的钱包</string>
+    <string name="main_left_menu_message_center">消息中心</string>
+    <string name="main_left_menu_didi_store">DiDi商城</string>
+    <string name="main_left_menu_reference_award">推荐有奖</string>
+    <string name="main_left_menu_driver_recruitment">司机招募</string>
+    <string name="main_left_menu_discover">发现</string>
+    <!--MainActivity-->
 </resources>

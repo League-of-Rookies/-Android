@@ -7,6 +7,16 @@
     <!--强调色: EditText编辑时、RadioButton选中、CheckBox等选中时的颜色。 -->
     <color name="colorAccent">@color/md_grey_900</color>
     <color name="textColorPrimary">@color/md_grey_600</color>
+    <!--默认背景色-->
     <color name="windowBackground">@color/md_grey_300</color>
+    <!--底部工具栏颜色-->
     <color name="navigationBarColor">@color/md_blue_grey_50</color>
+
+    <!--分割线的颜色-->
+    <color name="dividing_line">@color/md_blue_grey_600</color>
+    
+    <!--MainActivity-->
+    
+    <!--MainActivity-->
+    
 </resources>
